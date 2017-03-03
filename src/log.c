@@ -395,6 +395,7 @@ void log_garbage(t_session *session) {
 	}
 
 	if ((fp = fopen(session->config->garbage_logfile, "a")) == NULL) {
+		fclose(fp);
 		return;
 	}
 
